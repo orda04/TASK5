@@ -10,9 +10,10 @@
 
 #endif // SOLVE_H
 
-void mass4_output(int*a);
+void mass_output(int*a, int b);
 
 void Task1_Func(double* ,int );
+void Task2_Func (int* a);
 void Task3_Func (int* a);
 void Task4_Func (int* a, int b);
 bool checkmassive (int* a, int b);

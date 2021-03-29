@@ -2,10 +2,10 @@
 
 
 
-void mass4_output(int* a)
+void mass_output(int* a, int b)
 {
     std::cout<<"Your massive is \n";
-    for(int i=0;i<=ARR_SIZE;i++)
+    for(int i=0;i<b;i++)
         {
          std::cout <<" "<<a[i];
         }
@@ -26,6 +26,15 @@ void Task1_Func(double* a,int b)
 
 }
 
+void Task2_Func (int* a)
+{
+mass_output(a,10);
+    for (int i=0;i<=10;i++)
+       {
+         a[i]=a[i]^1;
+       }
+mass_output(a,10);
+}
 void Task3_Func (int* a)
 {
   a[0]=1;
@@ -55,13 +64,13 @@ void Task4_Func (int* a, int b)
          a[i]=i;
       }
    std::cout<<"ORIGINALLY ";
-   mass4_output(a);
+   mass_output(a, ARR_SIZE);
    if(b>0)
       {
        for (int j=1;j<=b;j++)
           {
-           tmp=a[ARR_SIZE];
-           for (int i=ARR_SIZE;i>=0;i--)
+           tmp=a[ARR_SIZE-1];
+           for (int i=ARR_SIZE-1;i>=0;i--)
               {
                  a[i]=a[i-1];
               }
@@ -77,11 +86,11 @@ void Task4_Func (int* a, int b)
              {
                 a[i]=a[i+1];
              }
-           a[ARR_SIZE]=tmp;
+           a[ARR_SIZE-1]=tmp;
          }
       }
     std::cout<<"MODIFIED ";
-    mass4_output(a);
+    mass_output(a, ARR_SIZE);
 }
 
 bool checkmassive (int* a, int b)
